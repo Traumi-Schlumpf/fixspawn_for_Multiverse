@@ -4,3 +4,36 @@ main: de.traumi.fixspawn.Fixspawn
 api-version: '1.20'
 authors: [Traumi_Schlumpf]
 website: https://github.com/Traumi-Schlumpf
+commands:
+  setfixworldspawnpoint:
+    description: Set the World to fix the world spawn point to the world in there the sender is. It declares only the overworld!
+    usage: /setfixworldspawnpoint
+    permission: fixspawn.setfixworldspawnpoint
+    aliases: fixworldspawn
+  fixworldspawn:
+    description: Set the World to fix the world spawn point to the world in there the sender is. It declares only the overworld!
+    usage: /setfixworldspawnpoint
+    permission: fixspawn.setfixworldspawnpoint
+    aliases: setfixworldspawnpoint
+  fixnetherspawn:
+    description: Set the World to fix the world spawn point to the world in there the sender is. It declares only the nether!
+    usage: /fixnetherspawn
+    permission: fixspawn.fixnetherspawnn
+  fixendspawn:
+    description: Set the World to fix the world spawn point to the world in there the sender is. It declares only the end!
+    usage: /fixnetherspawnn
+    permission: fixspawn.fixendspawnn
+  teleportlastsaveworld:
+    description: Teleports the Player to the Last Logout Point in the Config World
+    usage: /teleportlastsaveworld
+    permission: fixspawn.teleportlastsaveworld
+    aliases: tplogoutworld
+  tplogoutworld:
+    description: Teleports the Player to the Last Logout Point in the Config World
+    usage: /teleportlastsaveworld
+    permission: fixspawn.teleportlastsaveworld
+    aliases: teleportlastsaveworld
+  savecords:
+    description: Updates the Player postion manually
+    usage: /savecords
+    permission: fixspawn.savecords

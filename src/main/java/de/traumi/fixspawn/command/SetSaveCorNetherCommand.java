@@ -14,10 +14,10 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class SetSaveCorEndCommand implements CommandExecutor, TabCompleter {
+public class SetSaveCorNetherCommand implements CommandExecutor, TabCompleter {
     private final Fixspawn plugin;
 
-    public SetSaveCorEndCommand(Fixspawn plugin) {
+    public SetSaveCorNetherCommand(Fixspawn plugin) {
         this.plugin = plugin;
     }
 
@@ -29,9 +29,9 @@ public class SetSaveCorEndCommand implements CommandExecutor, TabCompleter {
         }
         FileConfiguration config = this.plugin.getConfig();
 
-        config.set("savecorend", player.getWorld().getName().toString());
+        config.set("savecornether", player.getWorld().getName());
         this.plugin.saveConfig();
-        sender.sendMessage(Component.text("Die End-Welt zum berrichtigen des Spawnpoints wurde auf " + player.getWorld().getName().toString() + " gesetzt.").color(NamedTextColor.GREEN));
+        sender.sendMessage(Component.text("Die Nether-Welt zum berrichtigen des Spawnpoints wurde auf " + player.getWorld().getName() + " gesetzt.").color(NamedTextColor.GREEN));
         return true;
     }
 

@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id("xyz.jpenilla.run-paper") version "2.1.0"
 }
 
 group = 'de.traumi'
@@ -18,7 +19,14 @@ repositories {
 }
 
 dependencies {
-compileOnly "io.papermc.paper:paper-api:1.20.2-R0.1-SNAPSHOT"
+    compileOnly "io.papermc.paper:paper-api:1.20.2-R0.1-SNAPSHOT"
+}
+
+tasks {
+    runServer {
+        dependsOn("build")
+        minecraftVersion("1.20.2")
+    }
 }
 
 def targetJavaVersion = 17

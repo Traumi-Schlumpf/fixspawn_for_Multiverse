@@ -14,10 +14,10 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class SetSaveCorWorldCommand implements CommandExecutor, TabCompleter {
+public class SetSaveCorEndCommand implements CommandExecutor, TabCompleter {
     private final Fixspawn plugin;
 
-    public SetSaveCorWorldCommand(Fixspawn plugin) {
+    public SetSaveCorEndCommand(Fixspawn plugin) {
         this.plugin = plugin;
     }
 
@@ -29,9 +29,9 @@ public class SetSaveCorWorldCommand implements CommandExecutor, TabCompleter {
         }
         FileConfiguration config = this.plugin.getConfig();
 
-        config.set("savecorworld", player.getWorld().getName().toString());
+        config.set("savecorend", player.getWorld().getName());
         this.plugin.saveConfig();
-        sender.sendMessage(Component.text("Die Welt zum berrichtigen des Spawnpoints wurde auf " + player.getWorld().getName().toString() + " gesetzt.").color(NamedTextColor.GREEN));
+        sender.sendMessage(Component.text("Die End-Welt zum berrichtigen des Spawnpoints wurde auf " + player.getWorld().getName() + " gesetzt.").color(NamedTextColor.GREEN));
         return true;
     }
 
