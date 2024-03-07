@@ -1,0 +1,6 @@
+name: fixspawn
+version: '${version}'
+main: de.traumi.fixspawn.Fixspawn
+api-version: '1.20'
+authors: [Traumi_Schlumpf]
+website: https://github.com/Traumi-Schlumpf
